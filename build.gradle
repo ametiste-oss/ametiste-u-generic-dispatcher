@@ -2,6 +2,8 @@ group 'org.ametiste.utils'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'maven-publish'
+apply plugin: 'maven'
 
 configurations.all {
     // check for updates every build
@@ -14,6 +16,7 @@ ext {
 }
 
 repositories {
+    mavenLocal()
     jcenter()
     mavenCentral()
 }
@@ -81,6 +84,6 @@ task wrapper(type: Wrapper) {
 
 configure(rootProject) {
 
-    description = 'Depositphotos High Level Search Service'
+    description = 'Generic dispatcher'
 
 }
